@@ -4,11 +4,12 @@ import requests
 from requests_oauthlib import OAuth1Session
 import json
 import datetime
+import os
 
-consumer_key = "---your consumer key ---"
-consumer_secret = "---your consumer secret key ---"
-access_token="---your access token ---"
-access_token_secret="---your access token secret key ---"
+consumer_key = os.getenv('CKEY')
+consumer_secret = os.getenv('CSECRET')
+access_token = os.getenv('ATOKEN')
+access_token_secret = os.getenv('ATOKENSECRET')
 
 payload = {"text": ""}
 
